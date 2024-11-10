@@ -3,12 +3,11 @@
 	"id": "rafaels-loot-bundle",
 	"version": "${version}",
 	"name": "Rafael's Loot Bundles",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds a fun and randomized loot system to Minecraft!",
 	"authors": [
 		"RaFaEL0 (Rafael)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
@@ -29,7 +28,7 @@
 		"rafaels-loot-bundle.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
+		"fabricloader": ">=0.16.7",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
