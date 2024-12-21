@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "rafaels-loot-bundle:item/loot_bundle"
-  }
-}

@@ -1,0 +1,41 @@
+{
+  "item.rafaels-loot-bundles.coal_loot_bundle": "Coal Loot Bundle",
+  "item.rafaels-loot-bundles.copper_loot_bundle": "Copper Loot Bundle",
+  "item.rafaels-loot-bundles.iron_loot_bundle": "Iron Loot Bundle",
+  "item.rafaels-loot-bundles.lapis_loot_bundle": "Lapis Loot Bundle",
+  "item.rafaels-loot-bundles.gold_loot_bundle": "Gold Loot Bundle",
+  "item.rafaels-loot-bundles.nether_gold_loot_bundle": "Nether Gold Loot Bundle",
+  "item.rafaels-loot-bundles.redstone_loot_bundle": "Redstone Loot Bundle",
+  "item.rafaels-loot-bundles.diamond_loot_bundle": "Diamond Loot Bundle",
+  "item.rafaels-loot-bundles.emerald_loot_bundle": "Emerald Loot Bundle",
+  "item.rafaels-loot-bundles.ancient_debris_loot_bundle": "Ancient Debris Loot Bundle",
+  "item.rafaels-loot-bundles.quartz_loot_bundle": "Quartz Loot Bundle",
+
+  "item.rafaels-loot-bundles.common_loot_bundle": "Common Loot Bundle",
+  "item.rafaels-loot-bundles.uncommon_loot_bundle": "Uncommon Loot Bundle",
+  "item.rafaels-loot-bundles.rare_loot_bundle": "Rare Loot Bundle",
+  "item.rafaels-loot-bundles.epic_loot_bundle": "Epic Loot Bundle",
+  "item.rafaels-loot-bundles.legendary_loot_bundle": "Legendary Loot Bundle",
+
+  "item.rafaels-loot-bundles.chicken_loot_bundle": "Chicken Loot Bundle",
+  "item.rafaels-loot-bundles.cow_loot_bundle": "Cow Loot Bundle",
+  "item.rafaels-loot-bundles.pig_loot_bundle": "Pig Loot Bundle",
+  "item.rafaels-loot-bundles.sheep_loot_bundle": "Sheep Loot Bundle",
+  "item.rafaels-loot-bundles.mooshroom_loot_bundle": "Mooshroom Loot Bundle",
+
+    "item.rafaels-loot-bundles.enderman_loot_bundle": "Enderman Loot Bundle",
+  "item.rafaels-loot-bundles.spider_loot_bundle": "Spider Loot Bundle",
+
+
+    "item.rafaels-loot-bundles.zombie_loot_bundle": "Zombie Loot Bundle",
+    "item.rafaels-loot-bundles.skeleton_loot_bundle": "Skeleton Loot Bundle",
+    "item.rafaels-loot-bundles.creeper_loot_bundle": "Creeper Loot Bundle",
+
+
+  "itemgroup.rafaels-loot-bundles.loot_bundles": "Loot Bundles",
+  "itemgroup.rafaels-loot-bundles.ore_loot_bundles": "Ore Loot Bundles",
+  "itemgroup.rafaels-loot-bundles.rarity_loot_bundles": "Rarity Loot Bundles",
+  "itemgroup.rafaels-loot-bundles.passive_mob_loot_bundles": "Passive Mob Loot Bundles",
+  "itemgroup.rafaels-loot-bundles.neutral_mob_loot_bundles": "Neutral Mob Loot Bundles",
+  "itemgroup.rafaels-loot-bundles.hostile_mob_loot_bundles": "Hostile Mob Loot Bundles"
+}

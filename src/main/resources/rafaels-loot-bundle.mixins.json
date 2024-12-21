@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "net.rafael.lootbundle.mixin",
+	"package": "net.rafael.lootbundles.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		
 	],
 	"injectors": {
 		"defaultRequire": 1
