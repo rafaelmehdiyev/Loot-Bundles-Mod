@@ -12,19 +12,16 @@ import java.util.*;
 
 public class LootBundleItem extends Item {
 
-    public LootBundleItem(Set<Item> itemList,int maxItemCount,Settings settings) {
-        super(settings);
-        this.itemList = itemList;
-        this.maxItemCount = maxItemCount;
-    }
-
-    private final Set<Item> itemList;
+    private final Map<Item, Integer> itemWeights; // Item and its weight
     private final int maxItemCount;
 
-
-    // A static Random object for better performance (one instance for the entire class)
     private static final Random RANDOM = new Random();
 
+    public LootBundleItem(Map<Item, Integer> itemWeights, int maxItemCount, Settings settings) {
+        super(settings);
+        this.itemWeights = itemWeights;
+        this.maxItemCount = Math.min(maxItemCount, 5);
+    }
 
     @Override
     public TypedActionResult<ItemStack> use(@NotNull World world, PlayerEntity player, Hand hand) {
@@ -39,42 +36,51 @@ public class LootBundleItem extends Item {
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
-    // Method to give loot to the player
     private void giveLootToPlayer(PlayerEntity player) {
-        // Get a random list of loot items
         List<ItemStack> loot = getRandomLoot();
-
-        // Give each item to the player
         for (ItemStack lootItem : loot) {
             player.giveItemStack(lootItem);
         }
     }
 
     private @NotNull List<ItemStack> getRandomLoot() {
-        List<Item> allItems = new ArrayList<>(itemList.stream().toList());
-        Collections.shuffle(allItems, RANDOM); // Shuffle the list to ensure randomness
+        // Prepare a weighted list
+        List<Item> weightedItems = new ArrayList<>();
+        for (Map.Entry<Item, Integer> entry : itemWeights.entrySet()) {
+            Item item = entry.getKey();
+            int weight = entry.getValue();
 
-        // Randomize the number of items to give, for example between 1 and maxItemCount
+            // Add the item to the list multiple times based on its weight
+            for (int i = 0; i < weight; i++) {
+                weightedItems.add(item);
+            }
+        }
+
+        // Shuffle the weighted list for randomness
+        Collections.shuffle(weightedItems, RANDOM);
+
+        // Randomize the number of items to give
         int numItems = RANDOM.nextInt(maxItemCount) + 1;
 
-        // Get the first 'numItems' from the shuffled list
+        // Generate loot items
         List<ItemStack> lootItems = new ArrayList<>();
         for (int i = 0; i < numItems; i++) {
-            Item randomItem = allItems.get(i);
+            // Pick a random item from the weighted list
+            Item randomItem = weightedItems.get(RANDOM.nextInt(weightedItems.size()));
 
             // Check if the item is stackable
             boolean isStackable = randomItem.getMaxCount() > 1;
 
-            // For stackable items, we generate a random quantity between 1 and 10
+            // For stackable items, generate a random quantity between 1 and 10
             if (isStackable) {
-                int quantity = RANDOM.nextInt(10) + 1; // Random quantity between 1 and 10
+                int quantity = RANDOM.nextInt(10) + 1;
                 lootItems.add(new ItemStack(randomItem, quantity));
             } else {
-                // For non-stackable items, we add only 1 item (no quantity variation)
+                // For non-stackable items, add only 1 item
                 lootItems.add(new ItemStack(randomItem, 1));
             }
         }
+
         return lootItems;
     }
-
 }

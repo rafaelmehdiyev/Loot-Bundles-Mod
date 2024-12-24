@@ -4,13 +4,18 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Rarity;
 
-import java.util.HashSet;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LegendaryLootBundleContent {
-    public static HashSet<Item> getItems(){
-        return Registries.ITEM.stream()
+    public static Map<Item, Integer> getItems() {
+        Map<Item, Integer> items = new HashMap<>();
+
+        // Filter items with Rarity.LEGENDARY and assign an integer value (e.g., weight or probability)
+        Registries.ITEM.stream()
                 .filter(item -> item.getDefaultStack().getRarity() == Rarity.EPIC)
-                .collect(Collectors.toCollection(HashSet::new));
+                .forEach(item -> items.put(item, 1));  // Replace '1' with your desired value
+
+        return items;
     }
 }

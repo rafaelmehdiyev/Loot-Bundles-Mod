@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
         itemModelGenerator.register(ModItems.COAL_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.IRON_LOOT_BUNDLE, Models.GENERATED);

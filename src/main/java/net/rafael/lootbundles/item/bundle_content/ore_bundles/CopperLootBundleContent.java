@@ -3,29 +3,29 @@ package net.rafael.lootbundles.item.bundle_content.ore_bundles;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CopperLootBundleContent {
-    public static HashSet<Item> getItems(){
-        return new HashSet<>(
-                Set.of(
-                        Items.COPPER_ORE,
-                        Items.RAW_COPPER,
-                        Items.RAW_COPPER_BLOCK,
-                        Items.COPPER_INGOT,
-                        Items.COPPER_BLOCK,
-                        Items.CHISELED_COPPER,
-                        Items.COPPER_GRATE,
-                        Items.CUT_COPPER,
-                        Items.CUT_COPPER_SLAB,
-                        Items.CUT_COPPER_STAIRS,
-                        Items.COPPER_DOOR,
-                        Items.COPPER_TRAPDOOR,
-                        Items.COPPER_BULB,
-                        Items.LIGHTNING_ROD
-                )
-        );
+    public static Map<Item, Integer> getItems() {
+        Map<Item, Integer> items = new HashMap<>();
+
+        // Assigning weights based on item rarity and utility
+        items.put(Items.COPPER_ORE, 5);            // Commonly obtained
+        items.put(Items.RAW_COPPER, 6);            // Common raw material
+        items.put(Items.RAW_COPPER_BLOCK, 4);      // Less common but valuable
+        items.put(Items.COPPER_INGOT, 7);          // Common crafted material
+        items.put(Items.COPPER_BLOCK, 3);          // Less common block
+        items.put(Items.CHISELED_COPPER, 2);      // Rare decorative block
+        items.put(Items.COPPER_GRATE, 2);          // Rare decorative item
+        items.put(Items.CUT_COPPER, 3);            // Slightly less common block
+        items.put(Items.CUT_COPPER_SLAB, 3);       // Slightly less common block
+        items.put(Items.CUT_COPPER_STAIRS, 3);     // Slightly less common block
+        items.put(Items.COPPER_DOOR, 1);           // Rare item
+        items.put(Items.COPPER_TRAPDOOR, 1);       // Rare item
+        items.put(Items.COPPER_BULB, 2);           // Special decorative item
+        items.put(Items.LIGHTNING_ROD, 2);         // Useful but rare
+
+        return items;
     }
 }
-

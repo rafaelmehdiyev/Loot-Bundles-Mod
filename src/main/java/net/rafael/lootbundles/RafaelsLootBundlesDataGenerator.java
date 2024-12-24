@@ -2,10 +2,7 @@ package net.rafael.lootbundles;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.rafael.lootbundles.datagen.ModItemTagProvider;
-import net.rafael.lootbundles.datagen.ModLootTableProvider;
 import net.rafael.lootbundles.datagen.ModModelProvider;
-import net.rafael.lootbundles.datagen.ModRecipeProvider;
 
 public class RafaelsLootBundlesDataGenerator implements DataGeneratorEntrypoint {
 	@Override

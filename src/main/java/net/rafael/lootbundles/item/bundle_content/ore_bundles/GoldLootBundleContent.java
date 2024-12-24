@@ -3,41 +3,40 @@ package net.rafael.lootbundles.item.bundle_content.ore_bundles;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GoldLootBundleContent {
-    public static HashSet<Item> getItems(){
-        return new HashSet<>(
-                Set.of(
-                        // Materials
-                        Items.GOLD_ORE,
-                        Items.RAW_GOLD,
-                        Items.RAW_GOLD_BLOCK,
-                        Items.GOLD_INGOT,
-                        Items.GOLD_NUGGET,
-                        Items.GOLD_BLOCK,
+    public static Map<Item, Integer> getItems() {
+        Map<Item, Integer> items = new HashMap<>();
 
-                        // Armor
-                        Items.GOLDEN_HELMET,
-                        Items.GOLDEN_CHESTPLATE,
-                        Items.GOLDEN_LEGGINGS,
-                        Items.GOLDEN_BOOTS,
-                        Items.GOLDEN_HORSE_ARMOR,
+        // Materials with weights
+        items.put(Items.GOLD_ORE, 3);          // Rare ore
+        items.put(Items.RAW_GOLD, 5);          // Raw gold, valuable
+        items.put(Items.RAW_GOLD_BLOCK, 2);    // Raw gold block
+        items.put(Items.GOLD_INGOT, 6);        // Common gold ingot
+        items.put(Items.GOLD_NUGGET, 4);       // Small amount of gold
+        items.put(Items.GOLD_BLOCK, 2);        // High-value block
 
-                        // Tools
-                        Items.GOLDEN_SWORD,
-                        Items.GOLDEN_SHOVEL,
-                        Items.GOLDEN_PICKAXE,
-                        Items.GOLDEN_AXE,
-                        Items.GOLDEN_HOE,
+        // Armor
+        items.put(Items.GOLDEN_HELMET, 4);     // Armor piece
+        items.put(Items.GOLDEN_CHESTPLATE, 5); // Armor piece
+        items.put(Items.GOLDEN_LEGGINGS, 4);   // Armor piece
+        items.put(Items.GOLDEN_BOOTS, 4);      // Armor piece
+        items.put(Items.GOLDEN_HORSE_ARMOR, 3); // Horse armor
 
-                        // Building
-                        Items.GOLDEN_APPLE,
+        // Tools
+        items.put(Items.GOLDEN_SWORD, 5);     // Golden tool
+        items.put(Items.GOLDEN_SHOVEL, 4);    // Golden tool
+        items.put(Items.GOLDEN_PICKAXE, 4);   // Golden tool
+        items.put(Items.GOLDEN_AXE, 4);       // Golden tool
+        items.put(Items.GOLDEN_HOE, 3);       // Golden tool
 
-                        Items.LIGHT_WEIGHTED_PRESSURE_PLATE,
-                        Items.POWERED_RAIL
-                )
-        );
+        // Building
+        items.put(Items.GOLDEN_APPLE, 7);     // Special building item
+        items.put(Items.LIGHT_WEIGHTED_PRESSURE_PLATE, 2); // Building item
+        items.put(Items.POWERED_RAIL, 3);     // Building item
+
+        return items;
     }
 }

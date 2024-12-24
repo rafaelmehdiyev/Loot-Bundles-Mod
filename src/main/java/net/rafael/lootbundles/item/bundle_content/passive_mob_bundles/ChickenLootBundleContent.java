@@ -3,20 +3,16 @@ package net.rafael.lootbundles.item.bundle_content.passive_mob_bundles;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ChickenLootBundleContent {
-    public static HashSet<Item> getItems() {
-        return new HashSet<>(
-                Set.of(
-                        Items.CHICKEN,
-                        Items.COOKED_CHICKEN,
-                        Items.FEATHER,
-                        Items.EGG
-                )
-        );
+    public static Map<Item, Integer> getItems() {
+        Map<Item, Integer> items = new HashMap<>();
+        items.put(Items.CHICKEN, 1);
+        items.put(Items.COOKED_CHICKEN, 1);
+        items.put(Items.FEATHER, 1);
+        items.put(Items.EGG, 1);
+        return items;
     }
 }
-
-
