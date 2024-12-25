@@ -73,7 +73,7 @@ public class LootBundleItem extends Item {
 
             // For stackable items, generate a random quantity between 1 and 10
             if (isStackable) {
-                int quantity = RANDOM.nextInt(10) + 1;
+                int quantity = RANDOM.nextInt(4) + 1;
                 lootItems.add(new ItemStack(randomItem, quantity));
             } else {
                 // For non-stackable items, add only 1 item

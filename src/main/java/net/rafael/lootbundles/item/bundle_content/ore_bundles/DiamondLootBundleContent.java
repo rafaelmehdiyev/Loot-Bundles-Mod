@@ -13,7 +13,7 @@ public class DiamondLootBundleContent {
         // Materials
         items.put(Items.DIAMOND_ORE, 3);          // Rare ore
         items.put(Items.DIAMOND, 6);              // Common material
-        items.put(Items.DIAMOND_BLOCK, 2);        // Rare block
+        items.put(Items.DIAMOND_BLOCK, 1);        // Rare block
 
         // Armor
         items.put(Items.DIAMOND_HELMET, 1);       // Rare armor piece

@@ -11,11 +11,11 @@ public class LapisLootBundleContent {
         Map<Item, Integer> items = new HashMap<>();
 
         // Materials with weights
-        items.put(Items.LAPIS_ORE, 4);           // Rare ore
-        items.put(Items.LAPIS_LAZULI, 5);        // Common material
-        items.put(Items.LAPIS_BLOCK, 3);         // High-value block
-        items.put(Items.BLUE_DYE, 2);            // Common dye
-        items.put(Items.EXPERIENCE_BOTTLE, 6);   // Valuable item for experience
+        items.put(Items.LAPIS_ORE, 6);           // Rare ore
+        items.put(Items.LAPIS_LAZULI, 6);        // Common material
+        items.put(Items.LAPIS_BLOCK, 2);         // High-value block
+        items.put(Items.BLUE_DYE, 6);            // Common dye
+        items.put(Items.EXPERIENCE_BOTTLE, 2);   // Valuable item for experience
 
         return items;
     }

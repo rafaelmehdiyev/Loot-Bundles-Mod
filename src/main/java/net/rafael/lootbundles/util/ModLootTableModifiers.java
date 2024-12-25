@@ -16,38 +16,151 @@ import java.util.Map;
 
 public class ModLootTableModifiers {
 
-    private static class LootBundleInfo {
-        final Item lootBundle;
-        final float chance;
-
-        LootBundleInfo(Item lootBundle, float chance) {
-            this.lootBundle = lootBundle;
-            this.chance = chance;
-        }
-    }
-
-    private static final Map<String, LootBundleInfo> MOB_LOOT_BUNDLES = new HashMap<>();
+    // Stores loot bundle information for both mobs and chests
+    private static final Map<String, LootBundleInfo> ENTITY_LOOT_BUNDLES = new HashMap<>();
+    private static final Map<String, LootBundleInfo> CHEST_LOOT_BUNDLES = new HashMap<>();
 
     static {
-        MOB_LOOT_BUNDLES.put("zombie", new LootBundleInfo(ModItems.ZOMBIE_LOOT_BUNDLE, 0.25f));
-        MOB_LOOT_BUNDLES.put("skeleton", new LootBundleInfo(ModItems.SKELETON_LOOT_BUNDLE, 0.30f));
-        MOB_LOOT_BUNDLES.put("creeper", new LootBundleInfo(ModItems.CREEPER_LOOT_BUNDLE, 0.35f));
-        MOB_LOOT_BUNDLES.put("spider", new LootBundleInfo(ModItems.SPIDER_LOOT_BUNDLE, 0.25f));
-        MOB_LOOT_BUNDLES.put("enderman", new LootBundleInfo(ModItems.ENDERMAN_LOOT_BUNDLE, 0.20f));
-        MOB_LOOT_BUNDLES.put("cow", new LootBundleInfo(ModItems.COW_LOOT_BUNDLE, 0.30f));
-        MOB_LOOT_BUNDLES.put("pig", new LootBundleInfo(ModItems.PIG_LOOT_BUNDLE, 0.30f));
-        MOB_LOOT_BUNDLES.put("sheep", new LootBundleInfo(ModItems.SHEEP_LOOT_BUNDLE, 0.25f));
-        MOB_LOOT_BUNDLES.put("chicken", new LootBundleInfo(ModItems.CHICKEN_LOOT_BUNDLE, 0.40f));
-        MOB_LOOT_BUNDLES.put("mooshroom", new LootBundleInfo(ModItems.MOOSHROOM_LOOT_BUNDLE, 0.20f));
+        // Register loot bundles for entities
+        registerEntityLoot("zombie", ModItems.ZOMBIE_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("skeleton", ModItems.SKELETON_LOOT_BUNDLE, 0.30f);
+        registerEntityLoot("creeper", ModItems.CREEPER_LOOT_BUNDLE, 0.35f);
+        registerEntityLoot("spider", ModItems.SPIDER_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("enderman", ModItems.ENDERMAN_LOOT_BUNDLE, 0.20f);
+        registerEntityLoot("cow", ModItems.COW_LOOT_BUNDLE, 0.30f);
+        registerEntityLoot("pig", ModItems.PIG_LOOT_BUNDLE, 0.30f);
+        registerEntityLoot("sheep", ModItems.SHEEP_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("chicken", ModItems.CHICKEN_LOOT_BUNDLE, 0.40f);
+        registerEntityLoot("mooshroom", ModItems.MOOSHROOM_LOOT_BUNDLE, 0.20f);
+        registerEntityLoot("ender_dragon", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
+        registerEntityLoot("wither", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
+        registerEntityLoot("iron_golem", ModItems.IRON_LOOT_BUNDLE, 0.20f);
+
+        // Register Common Loot Bundles
+        registerChestLoot("igloo_chest", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("abandoned_mineshaft", ModItems.COMMON_LOOT_BUNDLE, 0.40f);
+        registerChestLoot("ruined_portal", ModItems.COMMON_LOOT_BUNDLE, 0.18f);
+        registerChestLoot("shipwreck_map", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("shipwreck_supply", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("spawn_bonus_chest", ModItems.COMMON_LOOT_BUNDLE, 0.25f);
+        registerChestLoot("underwater_ruin_small", ModItems.COMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("underwater_ruin_big", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("buried_treasure", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("pillager_outpost", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("jungle_temple", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("simple_dungeon", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("stronghold_corridor", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("stronghold_crossing", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("stronghold_library", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_armorer", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_butcher", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_cartographer", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_desert_house", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_fisher", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_fletcher", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_mason", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_plains_house", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_savanna_house", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_shepherd", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_snowy_house", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_taiga_house", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_tannery", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_temple", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_toolsmith", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("village/village_weaponsmith", ModItems.COMMON_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("trial_chambers/supply", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
+
+
+// Register Uncommon Loot Bundles
+        registerChestLoot("abandoned_mineshaft", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("ancient_city_ice_box", ModItems.UNCOMMON_LOOT_BUNDLE, 0.12f);
+        registerChestLoot("bastion_hoglin_stable", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("bastion_other", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("desert_pyramid", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("jungle_temple", ModItems.UNCOMMON_LOOT_BUNDLE, 0.12f);
+        registerChestLoot("pillager_outpost", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("shipwreck_supply", ModItems.UNCOMMON_LOOT_BUNDLE, 0.12f);
+        registerChestLoot("underwater_ruin_big", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("buried_treasure", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("nether_bridge", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("shipwreck_treasure", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("shipwreck_map", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("simple_dungeon", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_corridor", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("stronghold_crossing", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("stronghold_library", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_armor", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_armorer", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_butcher", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_cartographer", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_desert_house", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_fisher", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_fletcher", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_mason", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_plains_house", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_savanna_house", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_shepherd", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_snowy_house", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_taiga_house", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_tannery", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_temple", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_toolsmith", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("village/village_weaponsmith", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("trial_chambers/corridor", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("trial_chambers/entrance", ModItems.UNCOMMON_LOOT_BUNDLE, 0.20f);
+        registerChestLoot("trial_chambers/intersection", ModItems.UNCOMMON_LOOT_BUNDLE, 0.40f);
+        registerChestLoot("trial_chambers/intersection_barrel", ModItems.UNCOMMON_LOOT_BUNDLE, 0.35f);
+        registerChestLoot("trial_chambers/supply", ModItems.UNCOMMON_LOOT_BUNDLE, 0.15f);
+
+// Register Rare Loot Bundles
+        registerChestLoot("abandoned_mineshaft", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("simple_dungeon", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("ancient_city", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("bastion_bridge", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("bastion_hoglin_stable", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("bastion_other", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("nether_bridge", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("shipwreck_treasure", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("woodland_mansion", ModItems.RARE_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("desert_pyramid", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("stronghold_corridor", ModItems.RARE_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_crossing", ModItems.RARE_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_library", ModItems.RARE_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("underwater_ruin_big", ModItems.RARE_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("trial_chambers/intersection", ModItems.RARE_LOOT_BUNDLE, 0.30f);
+        registerChestLoot("trial_chambers/intersection_barrel", ModItems.RARE_LOOT_BUNDLE, 0.25f);
+
+
+// Register Epic Loot Bundles
+        registerChestLoot("bastion_treasure", ModItems.EPIC_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("ancient_city", ModItems.EPIC_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("end_city_treasure", ModItems.EPIC_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_corridor", ModItems.EPIC_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_crossing", ModItems.EPIC_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("stronghold_library", ModItems.EPIC_LOOT_BUNDLE, 0.15f);
+        registerChestLoot("woodland_mansion", ModItems.EPIC_LOOT_BUNDLE, 0.10f);
+        registerChestLoot("trial_chambers/intersection", ModItems.EPIC_LOOT_BUNDLE, 0.20f);
+
+// Register Legendary Loot Bundles
+        registerChestLoot("end_city_treasure", ModItems.LEGENDARY_LOOT_BUNDLE, 0.10f);
     }
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (source.isBuiltin() && key.getValue().getNamespace().equals("minecraft") && key.getValue().getPath().startsWith("entities/")) {
-                String mobName = key.getValue().getPath().substring("entities/".length());
-                LootBundleInfo lootBundleInfo = MOB_LOOT_BUNDLES.get(mobName);
-                if (lootBundleInfo != null) {
-                    addLootPool(tableBuilder, lootBundleInfo.lootBundle, lootBundleInfo.chance);
+            if (!source.isBuiltin() || !key.getValue().getNamespace().equals("minecraft")) return;
+
+            String path = key.getValue().getPath();
+            if (path.startsWith("entities/")) {
+                String mobName = path.substring("entities/".length());
+                LootBundleInfo entityLoot = ENTITY_LOOT_BUNDLES.get(mobName);
+                if (entityLoot != null) {
+                    addLootPool(tableBuilder, entityLoot.lootBundle, 0.20f);
+                }
+            } else if (path.startsWith("chests/")) {
+                String chestName = path.substring("chests/".length());
+                LootBundleInfo chestLoot = CHEST_LOOT_BUNDLES.get(chestName);
+                if (chestLoot != null) {
+                    addLootPool(tableBuilder, chestLoot.lootBundle, chestLoot.chance);
                 }
             }
         });
@@ -61,4 +174,15 @@ public class ModLootTableModifiers {
                 .conditionally(RandomChanceLootCondition.builder(chance));
         tableBuilder.pool(poolBuilder.build());
     }
+
+    private static void registerEntityLoot(String entityName, Item lootBundle, float chance) {
+        ENTITY_LOOT_BUNDLES.put(entityName, new LootBundleInfo(lootBundle, chance));
+    }
+
+    private static void registerChestLoot(String chestName, Item lootBundle, float chance) {
+        CHEST_LOOT_BUNDLES.put(chestName, new LootBundleInfo(lootBundle, chance));
+    }
+
+    // Simple data holder record
+    private record LootBundleInfo(Item lootBundle, float chance) { }
 }

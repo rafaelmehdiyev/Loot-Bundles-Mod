@@ -11,31 +11,31 @@ public class GoldLootBundleContent {
         Map<Item, Integer> items = new HashMap<>();
 
         // Materials with weights
-        items.put(Items.GOLD_ORE, 3);          // Rare ore
+        items.put(Items.GOLD_ORE, 5);          // Rare ore
         items.put(Items.RAW_GOLD, 5);          // Raw gold, valuable
         items.put(Items.RAW_GOLD_BLOCK, 2);    // Raw gold block
         items.put(Items.GOLD_INGOT, 6);        // Common gold ingot
-        items.put(Items.GOLD_NUGGET, 4);       // Small amount of gold
+        items.put(Items.GOLD_NUGGET, 6);       // Small amount of gold
         items.put(Items.GOLD_BLOCK, 2);        // High-value block
 
         // Armor
-        items.put(Items.GOLDEN_HELMET, 4);     // Armor piece
-        items.put(Items.GOLDEN_CHESTPLATE, 5); // Armor piece
-        items.put(Items.GOLDEN_LEGGINGS, 4);   // Armor piece
-        items.put(Items.GOLDEN_BOOTS, 4);      // Armor piece
-        items.put(Items.GOLDEN_HORSE_ARMOR, 3); // Horse armor
+        items.put(Items.GOLDEN_HELMET, 3);     // Armor piece
+        items.put(Items.GOLDEN_CHESTPLATE, 3); // Armor piece
+        items.put(Items.GOLDEN_LEGGINGS, 3);   // Armor piece
+        items.put(Items.GOLDEN_BOOTS, 3);      // Armor piece
+        items.put(Items.GOLDEN_HORSE_ARMOR, 2); // Horse armor
 
         // Tools
-        items.put(Items.GOLDEN_SWORD, 5);     // Golden tool
-        items.put(Items.GOLDEN_SHOVEL, 4);    // Golden tool
-        items.put(Items.GOLDEN_PICKAXE, 4);   // Golden tool
-        items.put(Items.GOLDEN_AXE, 4);       // Golden tool
+        items.put(Items.GOLDEN_SWORD, 3);     // Golden tool
+        items.put(Items.GOLDEN_SHOVEL, 3);    // Golden tool
+        items.put(Items.GOLDEN_PICKAXE, 3);   // Golden tool
+        items.put(Items.GOLDEN_AXE, 3);       // Golden tool
         items.put(Items.GOLDEN_HOE, 3);       // Golden tool
 
         // Building
-        items.put(Items.GOLDEN_APPLE, 7);     // Special building item
-        items.put(Items.LIGHT_WEIGHTED_PRESSURE_PLATE, 2); // Building item
-        items.put(Items.POWERED_RAIL, 3);     // Building item
+        items.put(Items.GOLDEN_APPLE, 2);     // Special building item
+        items.put(Items.LIGHT_WEIGHTED_PRESSURE_PLATE, 5); // Building item
+        items.put(Items.POWERED_RAIL, 5);     // Building item
 
         return items;
     }

@@ -11,9 +11,9 @@ public class AncientDebrisLootBundleContent {
         Map<Item, Integer> items = new HashMap<>();
 
         // Assigning weights based on item rarity
-        items.put(Items.ANCIENT_DEBRIS, 5);         // Relatively rare
-        items.put(Items.NETHERITE_SCRAP, 4);       // Slightly more common
-        items.put(Items.NETHERITE_INGOT, 3);       // Less common
+        items.put(Items.ANCIENT_DEBRIS, 5);
+        items.put(Items.NETHERITE_SCRAP, 4);
+        items.put(Items.NETHERITE_INGOT, 3);
         items.put(Items.NETHERITE_BLOCK, 1);       // Very rare
 
         // Netherite armor and tools with lower weights

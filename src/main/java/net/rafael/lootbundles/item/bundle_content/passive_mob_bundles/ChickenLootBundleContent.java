@@ -9,10 +9,10 @@ import java.util.Map;
 public class ChickenLootBundleContent {
     public static Map<Item, Integer> getItems() {
         Map<Item, Integer> items = new HashMap<>();
-        items.put(Items.CHICKEN, 1);
-        items.put(Items.COOKED_CHICKEN, 1);
-        items.put(Items.FEATHER, 1);
-        items.put(Items.EGG, 1);
+        items.put(Items.CHICKEN, 2);
+        items.put(Items.COOKED_CHICKEN, 2);
+        items.put(Items.FEATHER, 3);
+        items.put(Items.EGG, 5);
         return items;
     }
 }
