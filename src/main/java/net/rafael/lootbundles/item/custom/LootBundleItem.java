@@ -3,8 +3,8 @@ package net.rafael.lootbundles.item.custom;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,7 +24,7 @@ public class LootBundleItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(@NotNull World world, PlayerEntity player, Hand hand) {
+    public ActionResult use(@NotNull World world, PlayerEntity player, Hand hand) {
         if (!world.isClient) {
             // Call the loot generation method and give items to the player
             giveLootToPlayer(player);
@@ -33,7 +33,7 @@ public class LootBundleItem extends Item {
             player.getStackInHand(hand).decrement(1);
         }
 
-        return TypedActionResult.success(player.getStackInHand(hand));
+        return ActionResult.SUCCESS;
     }
 
     private void giveLootToPlayer(PlayerEntity player) {
