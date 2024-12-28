@@ -19,22 +19,53 @@ public class ModLootTableModifiers {
     // Stores loot bundle information for both mobs and chests
     private static final Map<String, LootBundleInfo> ENTITY_LOOT_BUNDLES = new HashMap<>();
     private static final Map<String, LootBundleInfo> CHEST_LOOT_BUNDLES = new HashMap<>();
+    private static final Map<String, LootBundleInfo> ORE_LOOT_BUNDLES = new HashMap<>();
 
     static {
-        // Register loot bundles for entities
+
+        //<editor-fold desc="Entity Bundles">
         registerEntityLoot("zombie", ModItems.ZOMBIE_LOOT_BUNDLE, 0.25f);
-        registerEntityLoot("skeleton", ModItems.SKELETON_LOOT_BUNDLE, 0.30f);
-        registerEntityLoot("creeper", ModItems.CREEPER_LOOT_BUNDLE, 0.35f);
+        registerEntityLoot("skeleton", ModItems.SKELETON_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("creeper", ModItems.CREEPER_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("spider", ModItems.SPIDER_LOOT_BUNDLE, 0.25f);
-        registerEntityLoot("enderman", ModItems.ENDERMAN_LOOT_BUNDLE, 0.20f);
-        registerEntityLoot("cow", ModItems.COW_LOOT_BUNDLE, 0.30f);
-        registerEntityLoot("pig", ModItems.PIG_LOOT_BUNDLE, 0.30f);
+        registerEntityLoot("enderman", ModItems.ENDERMAN_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("cow", ModItems.COW_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("pig", ModItems.PIG_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("sheep", ModItems.SHEEP_LOOT_BUNDLE, 0.25f);
-        registerEntityLoot("chicken", ModItems.CHICKEN_LOOT_BUNDLE, 0.40f);
-        registerEntityLoot("mooshroom", ModItems.MOOSHROOM_LOOT_BUNDLE, 0.20f);
+        registerEntityLoot("chicken", ModItems.CHICKEN_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("mooshroom", ModItems.MOOSHROOM_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("ender_dragon", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
         registerEntityLoot("wither", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
-        registerEntityLoot("iron_golem", ModItems.IRON_LOOT_BUNDLE, 0.20f);
+        registerEntityLoot("iron_golem", ModItems.IRON_LOOT_BUNDLE, 0.25f);
+        //</editor-fold>
+
+        //<editor-fold desc="Ore Bundles">
+
+        registerOreLoot("coal_ore", ModItems.COAL_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_coal_ore", ModItems.COAL_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("copper_ore", ModItems.COPPER_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_copper_ore", ModItems.COPPER_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("iron_ore", ModItems.IRON_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_iron_ore", ModItems.IRON_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("lapis_ore", ModItems.LAPIS_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_lapis_ore", ModItems.LAPIS_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("gold_ore", ModItems.GOLD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_gold_ore", ModItems.GOLD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("nether_gold_ore", ModItems.NETHER_GOLD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_gold_ore", ModItems.NETHER_GOLD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("redstone_ore", ModItems.REDSTONE_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_redstone_ore", ModItems.REDSTONE_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("diamond_ore", ModItems.DIAMOND_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_diamond_ore", ModItems.DIAMOND_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("emerald_ore", ModItems.EMERALD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("deepslate_emerald_ore", ModItems.EMERALD_LOOT_BUNDLE, 0.30f);
+        registerOreLoot("ancient_debris", ModItems.ANCIENT_DEBRIS_LOOT_BUNDLE, 0.20f);
+        registerOreLoot("quartz_ore", ModItems.QUARTZ_LOOT_BUNDLE, 0.30f);
+
+
+        //</editor-fold>
+
+        //<editor-fold desc="Treasure Bundles">
 
         // Register Common Loot Bundles
         registerChestLoot("igloo_chest", ModItems.COMMON_LOOT_BUNDLE, 0.20f);
@@ -141,8 +172,9 @@ public class ModLootTableModifiers {
         registerChestLoot("woodland_mansion", ModItems.EPIC_LOOT_BUNDLE, 0.10f);
         registerChestLoot("trial_chambers/intersection", ModItems.EPIC_LOOT_BUNDLE, 0.20f);
 
-// Register Legendary Loot Bundles
+        // Register Legendary Loot Bundles
         registerChestLoot("end_city_treasure", ModItems.LEGENDARY_LOOT_BUNDLE, 0.10f);
+        //</editor-fold>
     }
 
     public static void modifyLootTables() {
@@ -150,18 +182,18 @@ public class ModLootTableModifiers {
             if (!source.isBuiltin() || !key.getValue().getNamespace().equals("minecraft")) return;
 
             String path = key.getValue().getPath();
+            LootBundleInfo lootInfo = null;
+
             if (path.startsWith("entities/")) {
-                String mobName = path.substring("entities/".length());
-                LootBundleInfo entityLoot = ENTITY_LOOT_BUNDLES.get(mobName);
-                if (entityLoot != null) {
-                    addLootPool(tableBuilder, entityLoot.lootBundle, 0.20f);
-                }
+                lootInfo = ENTITY_LOOT_BUNDLES.get(path.substring("entities/".length()));
             } else if (path.startsWith("chests/")) {
-                String chestName = path.substring("chests/".length());
-                LootBundleInfo chestLoot = CHEST_LOOT_BUNDLES.get(chestName);
-                if (chestLoot != null) {
-                    addLootPool(tableBuilder, chestLoot.lootBundle, chestLoot.chance);
-                }
+                lootInfo = CHEST_LOOT_BUNDLES.get(path.substring("chests/".length()));
+            } else if (path.startsWith("blocks/")) {
+                lootInfo = ORE_LOOT_BUNDLES.get(path.substring("blocks/".length()));
+            }
+
+            if (lootInfo != null) {
+                addLootPool(tableBuilder, lootInfo.lootBundle, lootInfo.chance);
             }
         });
     }
@@ -181,6 +213,10 @@ public class ModLootTableModifiers {
 
     private static void registerChestLoot(String chestName, Item lootBundle, float chance) {
         CHEST_LOOT_BUNDLES.put(chestName, new LootBundleInfo(lootBundle, chance));
+    }
+
+    private static void registerOreLoot(String oreName, Item lootBundle, float chance) {
+        ORE_LOOT_BUNDLES.put(oreName, new LootBundleInfo(lootBundle, chance));
     }
 
     // Simple data holder record

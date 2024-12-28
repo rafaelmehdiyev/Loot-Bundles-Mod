@@ -225,6 +225,7 @@ public class CommonLootBundleContent {
         blacklist.add(Items.ZOMBIE_SPAWN_EGG);
         blacklist.add(Items.ZOMBIE_VILLAGER_SPAWN_EGG);
         blacklist.add(Items.ZOMBIFIED_PIGLIN_SPAWN_EGG);
+        blacklist.add(Items.DRAGON_EGG);
 
         // Trims
         blacklist.add(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE);
@@ -271,6 +272,8 @@ public class CommonLootBundleContent {
         blacklist.add(Items.ZOMBIE_HEAD);
         blacklist.add(Items.SKELETON_SKULL);
         blacklist.add(Items.WITHER_SKELETON_SKULL);
+        blacklist.add(Items.DRAGON_HEAD);
+        blacklist.add(Items.PIGLIN_HEAD);
 
         // Ore and Minerals
         // Iron Blocks
@@ -310,6 +313,7 @@ public class CommonLootBundleContent {
         blacklist.add(Items.NETHER_WART);
         blacklist.add(Items.NETHER_WART_BLOCK);
         blacklist.add(Items.NETHERITE_BLOCK);
+        blacklist.add(Items.ANCIENT_DEBRIS);
 
         // End Blocks
         blacklist.add(Items.ENDER_CHEST);

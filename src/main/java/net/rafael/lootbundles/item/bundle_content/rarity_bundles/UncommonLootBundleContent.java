@@ -3,16 +3,14 @@ package net.rafael.lootbundles.item.bundle_content.rarity_bundles;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
-import net.minecraft.util.Rarity;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class UncommonLootBundleContent {
     public static Map<Item, Integer> getItems(){
-        Map<Item, Integer> items = new HashMap<>();
+        Map<Item, Integer> items = CommonLootBundleContent.getItems();
 
         // Define a blacklist of items to exclude
         Set<Item> blacklist = new HashSet<>();
@@ -35,22 +33,11 @@ public class UncommonLootBundleContent {
         blacklist.add(Items.DIAMOND_CHESTPLATE);
         blacklist.add(Items.DIAMOND_LEGGINGS);
         blacklist.add(Items.DIAMOND_BOOTS);
-        // Iron Armor
-        blacklist.add(Items.IRON_HELMET);
-        blacklist.add(Items.IRON_CHESTPLATE);
-        blacklist.add(Items.IRON_LEGGINGS);
-        blacklist.add(Items.IRON_BOOTS);
-        // Chainmail Armor
-        blacklist.add(Items.CHAINMAIL_HELMET);
-        blacklist.add(Items.CHAINMAIL_CHESTPLATE);
-        blacklist.add(Items.CHAINMAIL_LEGGINGS);
-        blacklist.add(Items.CHAINMAIL_BOOTS);
+
         // Other Armors
         blacklist.add(Items.TURTLE_HELMET);
         blacklist.add(Items.DIAMOND_HORSE_ARMOR);
         blacklist.add(Items.GOLDEN_HORSE_ARMOR);
-        blacklist.add(Items.IRON_HORSE_ARMOR);
-        blacklist.add(Items.WOLF_ARMOR);
 
         // Netherite Tools
         blacklist.add(Items.NETHERITE_SWORD);
@@ -64,70 +51,43 @@ public class UncommonLootBundleContent {
         blacklist.add(Items.DIAMOND_AXE);
         blacklist.add(Items.DIAMOND_SHOVEL);
         blacklist.add(Items.DIAMOND_HOE);
-        // Iron tools
-        blacklist.add(Items.IRON_SWORD);
-        blacklist.add(Items.IRON_PICKAXE);
-        blacklist.add(Items.IRON_AXE);
-        blacklist.add(Items.IRON_SHOVEL);
-        blacklist.add(Items.IRON_HOE);
-        // Golden tools
-        blacklist.add(Items.GOLDEN_SWORD);
-        blacklist.add(Items.GOLDEN_PICKAXE);
-        blacklist.add(Items.GOLDEN_AXE);
-        blacklist.add(Items.GOLDEN_SHOVEL);
-        blacklist.add(Items.GOLDEN_HOE);
+
         // Buckets
-        blacklist.add(Items.BUCKET);
-        blacklist.add(Items.WATER_BUCKET);
         blacklist.add(Items.LAVA_BUCKET);
-        blacklist.add(Items.MILK_BUCKET);
         blacklist.add(Items.AXOLOTL_BUCKET);
         blacklist.add(Items.PUFFERFISH_BUCKET);
-        blacklist.add(Items.SALMON_BUCKET);
-        blacklist.add(Items.COD_BUCKET);
-        blacklist.add(Items.TROPICAL_FISH_BUCKET);
-        blacklist.add(Items.POWDER_SNOW_BUCKET);
         // Other Tools
         blacklist.add(Items.DEBUG_STICK);
         blacklist.add(Items.ENCHANTED_BOOK);
         blacklist.add(Items.NAME_TAG);
         blacklist.add(Items.SADDLE);
-        blacklist.add(Items.LEAD);
         blacklist.add(Items.RECOVERY_COMPASS);
         blacklist.add(Items.TOTEM_OF_UNDYING);
-        blacklist.add(Items.SHIELD);
 
         // Materials
         blacklist.add(Items.BLAZE_POWDER);
         blacklist.add(Items.BLAZE_ROD);
         blacklist.add(Items.BREEZE_ROD);
-        blacklist.add(Items.COCOA_BEANS);
         blacklist.add(Items.DIAMOND);
         blacklist.add(Items.DRAGON_BREATH);
         blacklist.add(Items.ECHO_SHARD);
         blacklist.add(Items.EMERALD);
-        blacklist.add(Items.ENDER_EYE);
         blacklist.add(Items.GHAST_TEAR);
         blacklist.add(Items.GLISTERING_MELON_SLICE);
         blacklist.add(Items.GOLD_INGOT);
         blacklist.add(Items.GOLD_NUGGET);
         blacklist.add(Items.HEART_OF_THE_SEA);
-        blacklist.add(Items.IRON_INGOT);
         blacklist.add(Items.MAGMA_CREAM);
         blacklist.add(Items.NAUTILUS_SHELL);
         blacklist.add(Items.NETHERITE_INGOT);
         blacklist.add(Items.NETHERITE_SCRAP);
         blacklist.add(Items.NETHER_STAR);
-        blacklist.add(Items.PHANTOM_MEMBRANE);
         blacklist.add(Items.PRISMARINE_CRYSTALS);
         blacklist.add(Items.PRISMARINE_SHARD);
         blacklist.add(Items.POPPED_CHORUS_FRUIT);
         blacklist.add(Items.RAW_GOLD);
         blacklist.add(Items.RAW_IRON);
         blacklist.add(Items.SHULKER_SHELL);
-        blacklist.add(Items.SLIME_BALL);
-        blacklist.add(Items.ARMADILLO_SCUTE);
-        blacklist.add(Items.TURTLE_SCUTE);
         blacklist.add(Items.TRIAL_KEY);
         blacklist.add(Items.OMINOUS_TRIAL_KEY);
         blacklist.add(Items.TRIAL_SPAWNER);
@@ -143,7 +103,6 @@ public class UncommonLootBundleContent {
         // Potions
         blacklist.add(Items.POTION);
         blacklist.add(Items.SPLASH_POTION);
-        blacklist.add(Items.LINGERING_POTION);
 
         // Mob Eggs
         blacklist.add(Items.ALLAY_SPAWN_EGG);
@@ -226,6 +185,7 @@ public class UncommonLootBundleContent {
         blacklist.add(Items.ZOMBIE_SPAWN_EGG);
         blacklist.add(Items.ZOMBIE_VILLAGER_SPAWN_EGG);
         blacklist.add(Items.ZOMBIFIED_PIGLIN_SPAWN_EGG);
+        blacklist.add(Items.DRAGON_EGG);
 
         // Trims
         blacklist.add(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE);
@@ -272,12 +232,9 @@ public class UncommonLootBundleContent {
         blacklist.add(Items.ZOMBIE_HEAD);
         blacklist.add(Items.SKELETON_SKULL);
         blacklist.add(Items.WITHER_SKELETON_SKULL);
+        blacklist.add(Items.DRAGON_HEAD);
 
         // Ore and Minerals
-        // Iron Blocks
-        blacklist.add(Items.IRON_BLOCK);
-        blacklist.add(Items.RAW_IRON_BLOCK);
-        blacklist.add(Items.IRON_ORE);
 
 // Gold Blocks
         blacklist.add(Items.GOLD_BLOCK);
@@ -311,6 +268,7 @@ public class UncommonLootBundleContent {
         blacklist.add(Items.NETHER_WART);
         blacklist.add(Items.NETHER_WART_BLOCK);
         blacklist.add(Items.NETHERITE_BLOCK);
+        blacklist.add(Items.ANCIENT_DEBRIS);
 
         // End Blocks
         blacklist.add(Items.ENDER_CHEST);
