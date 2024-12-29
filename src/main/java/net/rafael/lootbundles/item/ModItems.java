@@ -19,10 +19,6 @@ import net.rafael.lootbundles.item.custom.LootBundleItem;
 
 public class ModItems {
 
-    private static Identifier ModIdentifier(String name) {
-        return Identifier.of(RafaelsLootBundles.MOD_ID, name);
-    }
-
     // <editor-fold desc="Ore Bundles">
 
     public static final Item COAL_LOOT_BUNDLE = registerItem("coal_loot_bundle",
@@ -171,6 +167,10 @@ public class ModItems {
                     .maxCount(16)));
 
 // </editor-fold>
+
+    private static Identifier ModIdentifier(String name) {
+        return Identifier.of(RafaelsLootBundles.MOD_ID, name);
+    }
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(RafaelsLootBundles.MOD_ID, name), item);
