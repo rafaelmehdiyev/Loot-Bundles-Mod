@@ -26,57 +26,57 @@ public class ModItems {
     // <editor-fold desc="Ore Bundles">
 
     public static final Item COAL_LOOT_BUNDLE = registerItem("coal_loot_bundle",
-            new LootBundleItem(CoalLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(CoalLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("coal_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item COPPER_LOOT_BUNDLE = registerItem("copper_loot_bundle",
-            new LootBundleItem(CopperLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(CopperLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("copper_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item IRON_LOOT_BUNDLE = registerItem("iron_loot_bundle",
-            new LootBundleItem(IronLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(IronLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("iron_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item LAPIS_LOOT_BUNDLE = registerItem("lapis_loot_bundle",
-            new LootBundleItem(LapisLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(LapisLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("lapis_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item GOLD_LOOT_BUNDLE = registerItem("gold_loot_bundle",
-            new LootBundleItem(GoldLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(GoldLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("gold_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item NETHER_GOLD_LOOT_BUNDLE = registerItem("nether_gold_loot_bundle",
-            new LootBundleItem(GoldLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(GoldLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("nether_gold_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item REDSTONE_LOOT_BUNDLE = registerItem("redstone_loot_bundle",
-            new LootBundleItem(RedstoneLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(RedstoneLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("redstone_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item DIAMOND_LOOT_BUNDLE = registerItem("diamond_loot_bundle",
-            new LootBundleItem(DiamondLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(DiamondLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("diamond_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item EMERALD_LOOT_BUNDLE = registerItem("emerald_loot_bundle",
-            new LootBundleItem(EmeraldLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(EmeraldLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("emerald_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item ANCIENT_DEBRIS_LOOT_BUNDLE = registerItem("ancient_debris_loot_bundle",
-            new LootBundleItem(AncientDebrisLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(AncientDebrisLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("ancient_debris_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item QUARTZ_LOOT_BUNDLE = registerItem("quartz_loot_bundle",
-            new LootBundleItem(QuartzLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(QuartzLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("quartz_loot_bundle")))
                     .maxCount(16)));
 
@@ -114,27 +114,27 @@ public class ModItems {
     // <editor-fold desc="Passive Mob Bundles">
 
     public static final Item CHICKEN_LOOT_BUNDLE = registerItem("chicken_loot_bundle",
-            new LootBundleItem(ChickenLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(ChickenLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("chicken_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item COW_LOOT_BUNDLE = registerItem("cow_loot_bundle",
-            new LootBundleItem(CowLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(CowLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("cow_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item PIG_LOOT_BUNDLE = registerItem("pig_loot_bundle",
-            new LootBundleItem(PigLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(PigLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("pig_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item SHEEP_LOOT_BUNDLE = registerItem("sheep_loot_bundle",
-            new LootBundleItem(SheepLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(SheepLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("sheep_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item MOOSHROOM_LOOT_BUNDLE = registerItem("mooshroom_loot_bundle",
-            new LootBundleItem(MooshroomLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(MooshroomLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("mooshroom_loot_bundle")))
                     .maxCount(16)));
     // </editor-fold>
@@ -142,12 +142,12 @@ public class ModItems {
     // <editor-fold desc="Neutral Mob Bundles">
 
     public static final Item ENDERMAN_LOOT_BUNDLE = registerItem("enderman_loot_bundle",
-            new LootBundleItem(EndermanLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(EndermanLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("enderman_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item SPIDER_LOOT_BUNDLE = registerItem("spider_loot_bundle",
-            new LootBundleItem(SpiderLootBundleContent.getItems(), 2, new Item.Settings()
+            new LootBundleItem(SpiderLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("spider_loot_bundle")))
                     .maxCount(16)));
 
@@ -156,17 +156,17 @@ public class ModItems {
     // <editor-fold desc="Hostile Mob Bundles">
 
     public static final Item ZOMBIE_LOOT_BUNDLE = registerItem("zombie_loot_bundle",
-            new LootBundleItem(ZombieLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(ZombieLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("zombie_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item SKELETON_LOOT_BUNDLE = registerItem("skeleton_loot_bundle",
-            new LootBundleItem(SkeletonLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(SkeletonLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("skeleton_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item CREEPER_LOOT_BUNDLE = registerItem("creeper_loot_bundle",
-            new LootBundleItem(CreeperLootBundleContent.getItems(), 5, new Item.Settings()
+            new LootBundleItem(CreeperLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("creeper_loot_bundle")))
                     .maxCount(16)));
 

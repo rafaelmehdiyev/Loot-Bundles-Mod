@@ -52,7 +52,6 @@ public class ModLootTableModifiers {
         registerOreLoot("gold_ore", ModItems.GOLD_LOOT_BUNDLE, 0.30f);
         registerOreLoot("deepslate_gold_ore", ModItems.GOLD_LOOT_BUNDLE, 0.30f);
         registerOreLoot("nether_gold_ore", ModItems.NETHER_GOLD_LOOT_BUNDLE, 0.30f);
-        registerOreLoot("deepslate_gold_ore", ModItems.NETHER_GOLD_LOOT_BUNDLE, 0.30f);
         registerOreLoot("redstone_ore", ModItems.REDSTONE_LOOT_BUNDLE, 0.30f);
         registerOreLoot("deepslate_redstone_ore", ModItems.REDSTONE_LOOT_BUNDLE, 0.30f);
         registerOreLoot("diamond_ore", ModItems.DIAMOND_LOOT_BUNDLE, 0.30f);
