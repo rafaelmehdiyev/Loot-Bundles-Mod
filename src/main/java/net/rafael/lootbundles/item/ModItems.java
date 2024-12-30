@@ -99,7 +99,7 @@ public class ModItems {
             new LootBundleItem(EndermanLootBundleContent.getItems(),1,new Item.Settings().maxCount(16)));
 
     public static final Item SPIDER_LOOT_BUNDLE = registerItem("spider_loot_bundle",
-            new LootBundleItem(SpiderLootBundleContent.getItems(),2,new Item.Settings().maxCount(16)));
+            new LootBundleItem(SpiderLootBundleContent.getItems(),1,new Item.Settings().maxCount(16)));
 
     // </editor-fold>
 
