@@ -10,6 +10,7 @@ import net.rafael.lootbundles.RafaelsLootBundles;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.CreeperLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.SkeletonLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.ZombieLootBundleContent;
+import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.DrownedLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.EndermanLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.SpiderLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.ore_bundles.*;
@@ -149,6 +150,11 @@ public class ModItems {
     public static final Item SPIDER_LOOT_BUNDLE = registerItem("spider_loot_bundle",
             new LootBundleItem(SpiderLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("spider_loot_bundle")))
+                    .maxCount(16)));
+
+    public static final Item DROWNED_LOOT_BUNDLE = registerItem("drowned_loot_bundle",
+            new LootBundleItem(DrownedLootBundleContent.getItems(), 1, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("drowned_loot_bundle")))
                     .maxCount(16)));
 
 // </editor-fold>
