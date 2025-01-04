@@ -7,6 +7,7 @@ c2182953565491a057cad4902343e409a7b96125 assets/rafaels-loot-bundles/items/commo
 b01f8bbcbe9613d5fa439ade45961c9594354572 assets/rafaels-loot-bundles/items/cow_loot_bundle.json
 26c6ca45c358ee083f59c608da397d6895460b1f assets/rafaels-loot-bundles/items/creeper_loot_bundle.json
 12f4695da4943953cd85f5372b3b6e249d9c22df assets/rafaels-loot-bundles/items/diamond_loot_bundle.json
+8d66f57070435d47e29c039d2eb8c2363eca2639 assets/rafaels-loot-bundles/items/drowned_loot_bundle.json
 7fbcd9e3fcaa7b6492cef943919c8ae9e264248f assets/rafaels-loot-bundles/items/emerald_loot_bundle.json
 a3e20e91eeff80f5a4a93c567d3f73a82661dcd9 assets/rafaels-loot-bundles/items/enderman_loot_bundle.json
 a6d7179ad9e6fdf4975d06350d728b776ad13469 assets/rafaels-loot-bundles/items/epic_loot_bundle.json
@@ -33,6 +34,7 @@ f8c9c8e323371b13bddcdd5b2a329286aefc66c1 assets/rafaels-loot-bundles/models/item
 a47f634b41d8440840b2b0021be51dd2cb90f387 assets/rafaels-loot-bundles/models/item/cow_loot_bundle.json
 095291cc95af465b7d28d8f5d32688785a7f7053 assets/rafaels-loot-bundles/models/item/creeper_loot_bundle.json
 e0a900bedd0d4d4ef89497c9a0afe616599757f0 assets/rafaels-loot-bundles/models/item/diamond_loot_bundle.json
+89399a9866e5be7cbfbd17da35e4fdfc0a64af7a assets/rafaels-loot-bundles/models/item/drowned_loot_bundle.json
 736169a9d21c040d6108a34706bcb3fe812bc3bd assets/rafaels-loot-bundles/models/item/emerald_loot_bundle.json
 ad3017da92aa5beae8c7de277a1a3f1995e08295 assets/rafaels-loot-bundles/models/item/enderman_loot_bundle.json
 dcf13a8429827d7775508e2aa00ff5af0e9f9563 assets/rafaels-loot-bundles/models/item/epic_loot_bundle.json
