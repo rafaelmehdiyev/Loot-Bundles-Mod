@@ -53,7 +53,8 @@ public class ModItemGroups {
     // <editor-fold desc="Neutral Mob Loot Bundle">
     public static final Collection<ItemStack> Neutral_Mob_Bundles = List.of(
             new ItemStack(ModItems.ENDERMAN_LOOT_BUNDLE),
-            new ItemStack(ModItems.SPIDER_LOOT_BUNDLE)
+            new ItemStack(ModItems.SPIDER_LOOT_BUNDLE),
+            new ItemStack(ModItems.DROWNED_LOOT_BUNDLE)
     );
     // </editor-fold>
 
