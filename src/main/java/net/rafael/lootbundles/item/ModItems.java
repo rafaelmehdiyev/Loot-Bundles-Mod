@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.rafael.lootbundles.RafaelsLootBundles;
+import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.BlazeLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.CreeperLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.SkeletonLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.ZombieLootBundleContent;
@@ -170,6 +171,11 @@ public class ModItems {
     public static final Item CREEPER_LOOT_BUNDLE = registerItem("creeper_loot_bundle",
             new LootBundleItem(CreeperLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("creeper_loot_bundle")))
+                    .maxCount(16)));
+
+    public static final Item BLAZE_LOOT_BUNDLE = registerItem("blaze_loot_bundle",
+            new LootBundleItem(BlazeLootBundleContent.getItems(), 1, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("blaze_loot_bundle")))
                     .maxCount(16)));
 
 // </editor-fold>

@@ -8,9 +8,6 @@ public class RafaelsLootBundlesDataGenerator implements DataGeneratorEntrypoint 
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-		//pack.addProvider(ModItemTagProvider::new);
-		//pack.addProvider(ModLootTableProvider::new);
-		//pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModModelProvider::new);
 	}
 }
