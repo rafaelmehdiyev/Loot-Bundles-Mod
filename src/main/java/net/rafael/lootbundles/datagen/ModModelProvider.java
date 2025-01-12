@@ -51,5 +51,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ZOMBIE_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SKELETON_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CREEPER_LOOT_BUNDLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLAZE_LOOT_BUNDLE, Models.GENERATED);
     }
 }
