@@ -62,7 +62,8 @@ public class ModItemGroups {
     public static final Collection<ItemStack> Hostile_Mob_Bundles = List.of(
             new ItemStack(ModItems.ZOMBIE_LOOT_BUNDLE),
             new ItemStack(ModItems.SKELETON_LOOT_BUNDLE),
-            new ItemStack(ModItems.CREEPER_LOOT_BUNDLE)
+            new ItemStack(ModItems.CREEPER_LOOT_BUNDLE),
+            new ItemStack(ModItems.BLAZE_LOOT_BUNDLE)
     );
     // </editor-fold>
 
