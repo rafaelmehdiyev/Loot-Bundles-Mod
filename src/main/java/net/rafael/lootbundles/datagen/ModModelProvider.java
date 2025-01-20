@@ -43,6 +43,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SHEEP_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHICKEN_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOOSHROOM_LOOT_BUNDLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AXOLOTL_LOOT_BUNDLE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ENDERMAN_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPIDER_LOOT_BUNDLE, Models.GENERATED);
