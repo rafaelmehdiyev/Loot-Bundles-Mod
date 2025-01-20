@@ -36,6 +36,7 @@ public class ModLootTableModifiers {
         registerEntityLoot("sheep", ModItems.SHEEP_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("chicken", ModItems.CHICKEN_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("mooshroom", ModItems.MOOSHROOM_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("axolotl", ModItems.AXOLOTL_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("ender_dragon", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
         registerEntityLoot("wither", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
         registerEntityLoot("iron_golem", ModItems.IRON_LOOT_BUNDLE, 0.25f);

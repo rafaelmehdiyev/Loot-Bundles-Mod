@@ -1,4 +1,4 @@
-// 1.21	2025-01-12T22:23:46.3635287	Rafael's Loot Bundles/Model Definitions
+// 1.21	2025-01-20T11:48:49.604362	Rafael's Loot Bundles/Model Definitions
 1e0bec4ce6a90180b3aa80613df20d125a8ce3ee assets\rafaels-loot-bundles\models\item\skeleton_loot_bundle.json
 f531a779c66dde0dec5a8529474ed90d65d444f8 assets\rafaels-loot-bundles\models\item\pig_loot_bundle.json
 a47f634b41d8440840b2b0021be51dd2cb90f387 assets\rafaels-loot-bundles\models\item\cow_loot_bundle.json
@@ -12,10 +12,11 @@ dcf13a8429827d7775508e2aa00ff5af0e9f9563 assets\rafaels-loot-bundles\models\item
 488be27495e2dd5bc620e9eccdfaa945204c34a9 assets\rafaels-loot-bundles\models\item\uncommon_loot_bundle.json
 56cf6e47ec822a82a23563a119ef6de514546963 assets\rafaels-loot-bundles\models\item\ancient_debris_loot_bundle.json
 ed0a15e0ae0ccc5cd37bfbe86bd64796c1c890b2 assets\rafaels-loot-bundles\models\item\spider_loot_bundle.json
-df4e771a6deb9ee5d37d9dd405c824f2a2ff879a assets\rafaels-loot-bundles\models\item\legendary_loot_bundle.json
 8f9c913037b0a1a512cefa9e39201e31a20579f2 assets\rafaels-loot-bundles\models\item\mooshroom_loot_bundle.json
+df4e771a6deb9ee5d37d9dd405c824f2a2ff879a assets\rafaels-loot-bundles\models\item\legendary_loot_bundle.json
 f8c9c8e323371b13bddcdd5b2a329286aefc66c1 assets\rafaels-loot-bundles\models\item\copper_loot_bundle.json
 598be3ca8dbb423b2a3e8109da480a857a1fdb44 assets\rafaels-loot-bundles\models\item\coal_loot_bundle.json
+e51d9500ffd4b80395506003fbaa44781c30e4fd assets\rafaels-loot-bundles\models\item\axolotl_loot_bundle.json
 51034a967a7cb11fb315ab0d69af8469917d3a02 assets\rafaels-loot-bundles\models\item\iron_loot_bundle.json
 78a65768f9fefd60167d750cff5c06941b2052a6 assets\rafaels-loot-bundles\models\item\zombie_loot_bundle.json
 32655bc06be33191b787d99e76b6f493fed3415b assets\rafaels-loot-bundles\models\item\sheep_loot_bundle.json
