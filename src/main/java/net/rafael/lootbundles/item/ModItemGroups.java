@@ -46,7 +46,8 @@ public class ModItemGroups {
             new ItemStack(ModItems.PIG_LOOT_BUNDLE),
             new ItemStack(ModItems.SHEEP_LOOT_BUNDLE),
             new ItemStack(ModItems.CHICKEN_LOOT_BUNDLE),
-            new ItemStack(ModItems.MOOSHROOM_LOOT_BUNDLE)
+            new ItemStack(ModItems.MOOSHROOM_LOOT_BUNDLE),
+            new ItemStack(ModItems.AXOLOTL_LOOT_BUNDLE)
     );
     // </editor-fold>
 
