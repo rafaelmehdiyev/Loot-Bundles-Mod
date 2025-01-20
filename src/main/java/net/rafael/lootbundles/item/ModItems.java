@@ -135,6 +135,11 @@ public class ModItems {
             new LootBundleItem(MooshroomLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("mooshroom_loot_bundle")))
                     .maxCount(16)));
+
+    public static final Item AXOLOTL_LOOT_BUNDLE = registerItem("axolotl_loot_bundle",
+            new LootBundleItem(AxolotlLootBundleContent.getItems(), 1, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("axolotl_loot_bundle")))
+                    .maxCount(16)));
     // </editor-fold>
 
     // <editor-fold desc="Neutral Mob Bundles">
