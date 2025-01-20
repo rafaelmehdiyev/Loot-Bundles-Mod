@@ -93,6 +93,8 @@ public class ModItems {
     public static final Item MOOSHROOM_LOOT_BUNDLE = registerItem("mooshroom_loot_bundle",
             new LootBundleItem(MooshroomLootBundleContent.getItems(),1,new Item.Settings().maxCount(16)));
 
+    public static final Item AXOLOTL_LOOT_BUNDLE = registerItem("axolotl_loot_bundle",
+            new LootBundleItem(AxolotlLootBundleContent.getItems(),1,new Item.Settings().maxCount(16)));
     // </editor-fold>
 
     // <editor-fold desc="Neutral Mob Bundles">
