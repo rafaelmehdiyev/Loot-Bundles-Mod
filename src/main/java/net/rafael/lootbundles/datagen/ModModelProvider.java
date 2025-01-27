@@ -47,6 +47,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.ENDERMAN_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPIDER_LOOT_BUNDLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CAVE_SPIDER_LOOT_BUNDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DROWNED_LOOT_BUNDLE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ZOMBIE_LOOT_BUNDLE, Models.GENERATED);
