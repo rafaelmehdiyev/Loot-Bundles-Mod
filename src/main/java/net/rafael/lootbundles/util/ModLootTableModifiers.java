@@ -30,6 +30,7 @@ public class ModLootTableModifiers {
 
         registerEntityLoot("blaze", ModItems.BLAZE_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("spider", ModItems.SPIDER_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("cave_spider", ModItems.CAVE_SPIDER_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("enderman", ModItems.ENDERMAN_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("drowned", ModItems.DROWNED_LOOT_BUNDLE, 0.25f);
 

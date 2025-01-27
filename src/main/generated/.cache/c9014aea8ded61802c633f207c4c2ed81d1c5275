@@ -1,4 +1,4 @@
-// 1.21.2	2025-01-20T12:17:36.6479862	Rafael's Loot Bundles/Model Definitions
+// 1.21.2	2025-01-27T13:54:12.6428414	Rafael's Loot Bundles/Model Definitions
 1e0bec4ce6a90180b3aa80613df20d125a8ce3ee assets\rafaels-loot-bundles\models\item\skeleton_loot_bundle.json
 f531a779c66dde0dec5a8529474ed90d65d444f8 assets\rafaels-loot-bundles\models\item\pig_loot_bundle.json
 a47f634b41d8440840b2b0021be51dd2cb90f387 assets\rafaels-loot-bundles\models\item\cow_loot_bundle.json
@@ -15,13 +15,14 @@ ed0a15e0ae0ccc5cd37bfbe86bd64796c1c890b2 assets\rafaels-loot-bundles\models\item
 df4e771a6deb9ee5d37d9dd405c824f2a2ff879a assets\rafaels-loot-bundles\models\item\legendary_loot_bundle.json
 8f9c913037b0a1a512cefa9e39201e31a20579f2 assets\rafaels-loot-bundles\models\item\mooshroom_loot_bundle.json
 f8c9c8e323371b13bddcdd5b2a329286aefc66c1 assets\rafaels-loot-bundles\models\item\copper_loot_bundle.json
-598be3ca8dbb423b2a3e8109da480a857a1fdb44 assets\rafaels-loot-bundles\models\item\coal_loot_bundle.json
 e51d9500ffd4b80395506003fbaa44781c30e4fd assets\rafaels-loot-bundles\models\item\axolotl_loot_bundle.json
+598be3ca8dbb423b2a3e8109da480a857a1fdb44 assets\rafaels-loot-bundles\models\item\coal_loot_bundle.json
 51034a967a7cb11fb315ab0d69af8469917d3a02 assets\rafaels-loot-bundles\models\item\iron_loot_bundle.json
 78a65768f9fefd60167d750cff5c06941b2052a6 assets\rafaels-loot-bundles\models\item\zombie_loot_bundle.json
 32655bc06be33191b787d99e76b6f493fed3415b assets\rafaels-loot-bundles\models\item\sheep_loot_bundle.json
 095291cc95af465b7d28d8f5d32688785a7f7053 assets\rafaels-loot-bundles\models\item\creeper_loot_bundle.json
 c058f39cbbb398f336f0542b2895def76a04824e assets\rafaels-loot-bundles\models\item\common_loot_bundle.json
+87820639e0c463f90b7049371806090f7dfebd2a assets\rafaels-loot-bundles\models\item\cave_spider_loot_bundle.json
 ad3017da92aa5beae8c7de277a1a3f1995e08295 assets\rafaels-loot-bundles\models\item\enderman_loot_bundle.json
 d7386903828afef21f688c39bb843101e89dea94 assets\rafaels-loot-bundles\models\item\nether_gold_loot_bundle.json
 e0a900bedd0d4d4ef89497c9a0afe616599757f0 assets\rafaels-loot-bundles\models\item\diamond_loot_bundle.json
