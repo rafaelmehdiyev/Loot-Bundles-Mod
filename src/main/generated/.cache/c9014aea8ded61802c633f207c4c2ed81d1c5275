@@ -2,6 +2,7 @@
 e1bc449edd8b2f03e53b70fb464003986e52fd47 assets/rafaels-loot-bundles/items/ancient_debris_loot_bundle.json
 16fba5a7484e29906baf78405284ac88b595d5bb assets/rafaels-loot-bundles/items/axolotl_loot_bundle.json
 d083db17ee424afa75bebbe01bdd703f0104ca1c assets/rafaels-loot-bundles/items/blaze_loot_bundle.json
+88dabc8745ddb93a9fb064790b803aa387f66e79 assets/rafaels-loot-bundles/items/cave_spider_loot_bundle.json
 6979f7ae722b1859e2f0881a04fdd87f62a6aec8 assets/rafaels-loot-bundles/items/chicken_loot_bundle.json
 96b6ba0ce52abedd031267e6da804b6b22cb7047 assets/rafaels-loot-bundles/items/coal_loot_bundle.json
 c2182953565491a057cad4902343e409a7b96125 assets/rafaels-loot-bundles/items/common_loot_bundle.json
@@ -31,6 +32,7 @@ dfd4f44cbf2ef2fed7d23450d61acda047e4072d assets/rafaels-loot-bundles/items/skele
 56cf6e47ec822a82a23563a119ef6de514546963 assets/rafaels-loot-bundles/models/item/ancient_debris_loot_bundle.json
 e51d9500ffd4b80395506003fbaa44781c30e4fd assets/rafaels-loot-bundles/models/item/axolotl_loot_bundle.json
 5495f3e4f98df3b12a60006867eb0d840c402224 assets/rafaels-loot-bundles/models/item/blaze_loot_bundle.json
+87820639e0c463f90b7049371806090f7dfebd2a assets/rafaels-loot-bundles/models/item/cave_spider_loot_bundle.json
 90cd83f860757ccc1c11536961332b4915e4d1a7 assets/rafaels-loot-bundles/models/item/chicken_loot_bundle.json
 598be3ca8dbb423b2a3e8109da480a857a1fdb44 assets/rafaels-loot-bundles/models/item/coal_loot_bundle.json
 c058f39cbbb398f336f0542b2895def76a04824e assets/rafaels-loot-bundles/models/item/common_loot_bundle.json
