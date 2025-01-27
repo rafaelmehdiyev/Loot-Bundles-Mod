@@ -28,15 +28,19 @@ public class ModLootTableModifiers {
         registerEntityLoot("skeleton", ModItems.SKELETON_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("creeper", ModItems.CREEPER_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("blaze", ModItems.BLAZE_LOOT_BUNDLE, 0.25f);
+
         registerEntityLoot("spider", ModItems.SPIDER_LOOT_BUNDLE, 0.25f);
+        registerEntityLoot("cave_spider", ModItems.CAVE_SPIDER_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("enderman", ModItems.ENDERMAN_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("drowned", ModItems.DROWNED_LOOT_BUNDLE, 0.25f);
+
         registerEntityLoot("cow", ModItems.COW_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("pig", ModItems.PIG_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("sheep", ModItems.SHEEP_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("chicken", ModItems.CHICKEN_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("mooshroom", ModItems.MOOSHROOM_LOOT_BUNDLE, 0.25f);
         registerEntityLoot("axolotl", ModItems.AXOLOTL_LOOT_BUNDLE, 0.25f);
+
         registerEntityLoot("ender_dragon", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
         registerEntityLoot("wither", ModItems.LEGENDARY_LOOT_BUNDLE, 1.0f);
         registerEntityLoot("iron_golem", ModItems.IRON_LOOT_BUNDLE, 0.25f);
