@@ -11,6 +11,7 @@ import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.BlazeLootB
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.CreeperLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.SkeletonLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.hostile_mob_bundles.ZombieLootBundleContent;
+import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.CaveSpiderLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.DrownedLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.EndermanLootBundleContent;
 import net.rafael.lootbundles.item.bundle_content.neutral_mob_bundles.SpiderLootBundleContent;
@@ -152,6 +153,11 @@ public class ModItems {
     public static final Item SPIDER_LOOT_BUNDLE = registerItem("spider_loot_bundle",
             new LootBundleItem(SpiderLootBundleContent.getItems(), 1, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("spider_loot_bundle")))
+                    .maxCount(16)));
+
+    public static final Item CAVE_SPIDER_LOOT_BUNDLE = registerItem("cave_spider_loot_bundle",
+            new LootBundleItem(CaveSpiderLootBundleContent.getItems(), 1, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, ModIdentifier("cave_spider_loot_bundle")))
                     .maxCount(16)));
 
     public static final Item DROWNED_LOOT_BUNDLE = registerItem("drowned_loot_bundle",
