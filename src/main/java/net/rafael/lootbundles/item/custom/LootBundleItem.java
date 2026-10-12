@@ -36,12 +36,21 @@ public class LootBundleItem extends Item {
         return ActionResult.SUCCESS;
     }
 
-    private void giveLootToPlayer(PlayerEntity player) {
-        List<ItemStack> loot = getRandomLoot();
-        for (ItemStack lootItem : loot) {
-            player.giveItemStack(lootItem);
+    
+private void giveLootToPlayer(PlayerEntity player) {
+    List<ItemStack> loot = getRandomLoot();
+
+    for (ItemStack lootItem : loot) {
+        ItemStack remaining = lootItem.copy();
+
+        player.getInventory().insertStack(remaining);
+
+        if (!remaining.isEmpty()) {
+            player.dropItem(remaining, false);
         }
     }
+}
+
 
     private @NotNull List<ItemStack> getRandomLoot() {
         // Prepare a weighted list
